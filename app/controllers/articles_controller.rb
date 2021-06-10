@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  http_basic_authenticate_with name: "dgg", password: "secret", except: [:index, :show]
+  http_basic_authenticate_with name: "d12", password: "secret", except: [:index, :show]
 
   def index
     @articles = Article.all
@@ -20,7 +20,6 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to @article
     else
-      print "SOMETHING WENT WRONG"
       render :new
     end
   end
