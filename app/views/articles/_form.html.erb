@@ -1,26 +1,26 @@
 <%= form_with model: article do |form| %>
-  <div class =>
+  <div>
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
     <% article.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
+      <div class="errors"><%= message %></div>
     <% end %>
+    <%= form.text_field :title %>
   </div>
 
     <div>
     <%= form.label :short_text %><br>
-    <%= form.text_area :short_text %><br>
-    <% article.errors.full_messages_for(:short_text).each do |message| %>
-      <div><%= message %></div>
+    <% article.errors.full_messages_for(:body).each do |message| %>
+      <div class="errors"><%= message %></div>
     <% end %>
+    <%= form.text_area :short_text %><br>
   </div>
 
   <div>
     <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
     <% article.errors.full_messages_for(:body).each do |message| %>
-      <div><%= message %></div>
+      <div class="errors"><%= message %></div>
     <% end %>
+    <%= form.text_area :body %><br>
   </div>
 
   <div>
