@@ -6,10 +6,20 @@ a{
     text-decoration: none;
 }
 
+li{
+    list-style-type: none;
+}
+
+#description-container{   
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .description{
     display: flex;
     justify-content: center;
-    margin-bottom: 70px;
+    /*margin-bottom: 70px;*/
     flex-wrap: wrap;
 }
 .description p{
@@ -20,7 +30,7 @@ a{
     text-align: center;
 }
 
-#posts-container{
+.posts-container{
     display: flex;
     justify-content: center;
 }
@@ -30,11 +40,6 @@ a{
     font-size: large;
     font-weight: bold;
 }
-
-.articles ul{
-    list-style-type: none;
-}
-
 .articles br{
     line-height: 5px;
 }
@@ -49,4 +54,15 @@ a{
     font-weight: normal;
     font-style: italic;
     margin-bottom: 20px;
+}
+
+.body-text{
+    width: 60%;
+    text-align: justify;
+    font-family:'Batang';
+}
+
+.buttons-centered{
+    display:flex;
+    justify-content:center;
 }

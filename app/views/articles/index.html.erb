@@ -1,13 +1,15 @@
 <h1>The legends of Kalamatian souvlakia</h1>
 
-<div class = "description">
-    <p> This webpage features the stories about 
-    the legendary souvlakia of Kalamata - exactly <%= @articles.count%> distinct types of souvlaki 
-    you can discover all around Kalamata. Dive in into the stories of souvlakia
-    and learn everything about them yourself!</p>
+<div id = "description-container">
+    <div class = "description">
+        <p> This webpage features the tales about 
+        the legendary souvlakia of Kalamata - exactly <%= @articles.count%> distinct stories of souvlakia 
+        you can discover all around Kalamata. Dive in into the stories of souvlakia
+        and learn everything about them yourself!</p>
+    </div>
+    <%= image_tag "greek_pita.png", height: 250 %>
 </div>
-
-<div id = "posts-container">
+<div class = "posts-container">
     <ul class = "articles">
         <% @articles.each do |article| %>
             <li>
@@ -18,4 +20,4 @@
     </ul>
 </div>
 
-<%= link_to '<button type="button">New Post</button>'.html_safe, new_article_path %>
+<%= link_to '<button type="button">Add new</button>'.html_safe, new_article_path %>

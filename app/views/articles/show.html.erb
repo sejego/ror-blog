@@ -1,10 +1,14 @@
 <h1><%= @article.title %></h1>
 
-<p><%= @article.body %></p>
-
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article),
+<div class = "buttons-centered">
+<%= link_to '<button type="button">Main Page</button>'.html_safe, articles_path %>
+</div>
+<div class = "posts-container">
+    <p class = "body-text"><%= @article.body %></p>
+</div>
+<ul class = "buttons-centered">
+  <li><%= link_to '<button type="button">Edit</button>'.html_safe, edit_article_path(@article) %></li>
+  <li><%= link_to '<button type="button">Delete</button>'.html_safe, article_path(@article),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></li>
 </ul>
