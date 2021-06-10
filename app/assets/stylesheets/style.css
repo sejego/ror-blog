@@ -1,0 +1,27 @@
+h1{
+    font-family:'Batang';
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.description p{
+    height: fit-content;
+    width: 40%;
+    border: 1px solid black;
+    font-family: 'Batang';
+    font-style: italic;
+    text-align: center;
+}
+
+.articles{
+    font-family:'Batang';
+    border: 1px solid black;
+    font-size: large;
+    font-weight: bold;
+}
