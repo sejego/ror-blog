@@ -20,6 +20,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to @article
     else
+      print "SOMETHING WENT WRONG"
       render :new
     end
   end

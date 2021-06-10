@@ -9,7 +9,7 @@
 
     <div>
     <%= form.label :short_text %><br>
-    <% article.errors.full_messages_for(:body).each do |message| %>
+    <% article.errors.full_messages_for(:short_text).each do |message| %>
       <div class="errors"><%= message %></div>
     <% end %>
     <%= form.text_area :short_text %><br>
