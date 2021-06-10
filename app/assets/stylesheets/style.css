@@ -5,23 +5,48 @@ h1{
 a{
     text-decoration: none;
 }
+
 .description{
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
 }
 .description p{
     height: fit-content;
     width: 40%;
-    border: 1px solid black;
     font-family: 'Batang';
     font-style: italic;
     text-align: center;
 }
 
+#posts-container{
+    display: flex;
+    justify-content: center;
+}
 .articles{
+    width: 40%;
     font-family:'Batang';
-    border: 1px solid black;
     font-size: large;
     font-weight: bold;
+}
+
+.articles ul{
+    list-style-type: none;
+}
+
+.articles br{
+    line-height: 5px;
+}
+.articles li{
+    font-size: 16px;
+    border-bottom: 1px solid black;
+    margin-bottom: 25px;
+}
+
+.short-text{
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 20px;
 }

@@ -1,18 +1,21 @@
 <h1>The legends of Kalamatian souvlakia</h1>
 
 <div class = "description">
-<p> This webpage features the stories about 
-the legendary souvlakia of Kalamata - exactly 5 distinct types of souvlaki 
-you can discover all around Kalamata. Dive in into the stories of souvlakia
-and learn everything about them yourself!</p>
+    <p> This webpage features the stories about 
+    the legendary souvlakia of Kalamata - exactly <%= @articles.count%> distinct types of souvlaki 
+    you can discover all around Kalamata. Dive in into the stories of souvlakia
+    and learn everything about them yourself!</p>
 </div>
 
-<ul class = "articles">
-  <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article %>
-    </li>
-  <% end %>
-</ul>
+<div id = "posts-container">
+    <ul class = "articles">
+        <% @articles.each do |article| %>
+            <li>
+            <%= link_to article.title, article %>
+            <p class= "short-text"><%= article.short_text %></p>
+            </li>
+        <% end %>
+    </ul>
+</div>
 
 <%= link_to '<button type="button">New Post</button>'.html_safe, new_article_path %>
